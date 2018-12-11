@@ -1,0 +1,51 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" >
+  <div>
+    <div>
+      <h3>Create Employee</h3>
+    </div>
+    <div>
+      <div>
+        <label for="userName">Full Name</label>
+        <div>
+          <input id="userName" formControlName="userName" type="text">
+        </div>
+
+      </div>
+      <div >
+          <label for="Email">Email</label>
+          <div >
+            <input id="email" formControlName="email" type="text">
+          </div>
+  
+        </div>
+        <div >
+            <label for="Password">Password</label>
+            <div >
+              <input id="password" formControlName="password" type="password">
+            </div>
+    
+          </div>
+
+    </div>
+    <div>
+      <button  type="submit">Save</button>
+    </div>
+  </div>
+
+</form>
+
+<table>
+<tr style="border: 2px">
+  <th>fullName</th>
+  <th>Email</th>
+</tr>
+<tr>
+<td>{{employeeForm.value | json}}</td>
+</tr>
+
+
+</table>
+
+
+
+
